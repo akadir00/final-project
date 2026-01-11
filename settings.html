@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BİR-OBS | Ayarlar</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h3>BİR-OBS</h3>
+                <span>Öğrenci</span>
+            </div>
+
+            <div class="user-mini-profile">
+                <div class="avatar">AY</div>
+                <div class="user-info-mini">
+                    <p>Abdulkadir Yılmaz</p>
+                    <span>Bilgisayar Müh.</span>
+                </div>
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="dashboard.html">📅 Genel Bakış</a></li>
+                <li><a href="course-selection.html">📚 Ders Seçimi</a></li>
+                <li><a href="schedule.html">🕒 Ders Programı</a></li>
+                <li><a href="transcript.html">📝 Transkript</a></li>
+                <li><a href="settings.html" class="active">⚙️ Ayarlar</a></li>
+            </ul>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="top-bar">
+                <div class="page-title">
+                    <h1>Hesap Ayarları</h1>
+                </div>
+                <button onclick="logout()" class="logout-btn">Çıkış Yap</button>
+            </div>
+
+            <div class="content-wrapper">
+
+                <div class="course-table-container">
+                    <h3>Şifre Değiştir</h3>
+                    <form id="change-password-form" onsubmit="handlePasswordChange(event)">
+                        <div class="input-group">
+                            <label>Mevcut Şifre</label>
+                            <input type="password" id="current-password" required>
+                        </div>
+                        <div class="input-group">
+                            <label>Yeni Şifre</label>
+                            <input type="password" id="new-password" required>
+                        </div>
+                        <div class="input-group">
+                            <label>Yeni Şifre (Tekrar)</label>
+                            <input type="password" id="confirm-password" required>
+                        </div>
+                        <button type="submit" class="login-btn" style="width: auto; padding: 10px 30px;">Kaydet</button>
+                    </form>
+                </div>
+
+                <br>
+
+                <div class="course-table-container">
+                    <h3>İletişim Bilgileri</h3>
+                    <div class="input-group">
+                        <label>E-Posta</label>
+                        <input type="email" value="akyil@st.biruni.edu.tr" disabled style="background-color: #eee;">
+                    </div>
+                    <div class="input-group">
+                        <label>Telefon</label>
+                        <input type="tel" value="+90 555 123 45 67">
+                    </div>
+                    <button class="login-btn" style="width: auto; padding: 10px 30px;">Güncelle</button>
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+
+</html>

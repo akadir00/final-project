@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BİR-OBS | Login</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="login-body">
+
+    <div class="login-container">
+        <div class="login-card">
+            <div class="login-header">
+                <div class="logo-area">
+                    <div class="logo-icon">🎓</div>
+                    <h1>BİR-OBS</h1>
+                </div>
+                <p>Biruni University Student Information System</p>
+            </div>
+
+            <form id="loginForm" onsubmit="handleLogin(event)">
+                <div class="role-switch">
+                    <button type="button" class="role-btn active" onclick="setRole('student')" id="btn-student">Student</button>
+                    <button type="button" class="role-btn" onclick="setRole('advisor')" id="btn-advisor">Advisor</button>
+                </div>
+                <input type="hidden" id="selectedRole" value="student">
+
+                <div class="input-group">
+                    <label for="userId" id="label-userId">Student Number</label>
+                    <input type="text" id="userId" placeholder="Enter your ID" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" placeholder="Enter your password" required>
+                </div>
+
+                <div class="actions">
+                    <a href="#" class="forgot-pass">Forgot Password?</a>
+                </div>
+
+                <button type="submit" class="login-btn">Login</button>
+            </form>
+            
+            <div class="login-footer">
+                <p>&copy; 2026 Biruni University</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>

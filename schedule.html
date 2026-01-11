@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BİR-OBS | Ders Programı</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .schedule-table th,
+        .schedule-table td {
+            text-align: center;
+            border: 1px solid #ddd;
+            height: 60px;
+        }
+
+        .course-slot {
+            background-color: #e3f2fd;
+            color: #0d47a1;
+            padding: 5px;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h3>BİR-OBS</h3>
+                <span>Öğrenci</span>
+            </div>
+
+            <div class="user-mini-profile">
+                <div class="avatar">AY</div>
+                <div class="user-info-mini">
+                    <p>Abdulkadir Yılmaz</p>
+                    <span>Bilgisayar Müh.</span>
+                </div>
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="dashboard.html">📅 Genel Bakış</a></li>
+                <li><a href="course-selection.html">📚 Ders Seçimi</a></li>
+                <li><a href="schedule.html" class="active">🕒 Ders Programı</a></li>
+                <li><a href="transcript.html">📝 Transkript</a></li>
+                <li><a href="settings.html">⚙️ Ayarlar</a></li>
+            </ul>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="top-bar">
+                <div class="page-title">
+                    <h1>Haftalık Ders Programı</h1>
+                </div>
+                <button onclick="logout()" class="logout-btn">Çıkış Yap</button>
+            </div>
+
+            <div class="content-wrapper">
+                <div class="course-table-container">
+                    <h3>2025-2026 Bahar Dönemi</h3>
+                    <table class="schedule-table">
+                        <thead>
+                            <tr>
+                                <th>Saat</th>
+                                <th>Pazartesi</th>
+                                <th>Salı</th>
+                                <th>Çarşamba</th>
+                                <th>Perşembe</th>
+                                <th>Cuma</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>09:00 - 10:00</td>
+                                <td></td>
+                                <td>
+                                    <div class="course-slot">CENG304 (Lab)</div>
+                                </td>
+                                <td></td>
+                                <td>
+                                    <div class="course-slot">HIST101</div>
+                                </td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>10:00 - 11:00</td>
+                                <td>
+                                    <div class="course-slot">CENG306</div>
+                                </td>
+                                <td>
+                                    <div class="course-slot">CENG304 (Lab)</div>
+                                </td>
+                                <td></td>
+                                <td>
+                                    <div class="course-slot">HIST101</div>
+                                </td>
+                                <td>
+                                    <div class="course-slot">CENG308</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>11:00 - 12:00</td>
+                                <td>
+                                    <div class="course-slot">CENG306</div>
+                                </td>
+                                <td></td>
+                                <td>
+                                    <div class="course-slot">ENG102</div>
+                                </td>
+                                <td></td>
+                                <td>
+                                    <div class="course-slot">CENG308</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>13:00 - 14:00</td>
+                                <td></td>
+                                <td>
+                                    <div class="course-slot">CENG304</div>
+                                </td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>14:00 - 15:00</td>
+                                <td></td>
+                                <td>
+                                    <div class="course-slot">CENG304</div>
+                                </td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+
+</html>
